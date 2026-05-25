@@ -1,0 +1,25 @@
+SUBSCRIPTION DOWNGRADED - Plan Changed
+======================================
+
+Hi {{ user_name }},
+
+Your subscription has been downgraded from {{ from_tier }} to {{ to_tier }}.
+
+FEATURES YOU STILL HAVE ACCESS TO
+==================================
+
+{% for feature in features_retained %}
+✓ {{ feature }}
+{% else %}
+Limited features (Free tier)
+{% endfor %}
+
+Your downgrade takes effect immediately and will apply to your next billing cycle.
+
+View available plans and upgrade anytime at {{ upgrade_url }}
+
+If you downgraded by mistake or would like to upgrade again, you can do so anytime from your account settings. If you have any questions, please contact us at {{ support_email }}.
+
+---
+© {% now "Y" %} Greatest Game Agent. All rights reserved.
+This is an automated message. Please do not reply to this email.

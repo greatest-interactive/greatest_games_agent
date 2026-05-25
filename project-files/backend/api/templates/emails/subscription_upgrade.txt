@@ -1,0 +1,27 @@
+WELCOME TO {{ to_tier }}! - Your Subscription Has Been Upgraded
+================================================================
+
+Hi {{ user_name }},
+
+Congratulations! Your subscription has been successfully upgraded from {{ from_tier }} to {{ to_tier }}.
+
+NEW FEATURES AVAILABLE
+======================
+
+{% for feature in new_features %}
+• {{ feature }}
+{% endfor %}
+
+{% if amount > 0 %}
+AMOUNT CHARGED: ${{ amount|floatformat:2 }}
+{% else %}
+✓ Your prorated credit has been applied. No additional charge for this month.
+{% endif %}
+
+View your account and manage your subscription at {{ account_url }}
+
+If you have any questions or need assistance, please contact our support team at {{ support_email }}.
+
+---
+© {% now "Y" %} Greatest Game Agent. All rights reserved.
+This is an automated message. Please do not reply to this email.

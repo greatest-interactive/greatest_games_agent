@@ -1,0 +1,26 @@
+SUBSCRIPTION RENEWAL - Your {{ tier_name }} Plan Renews Soon
+===========================================================
+
+Hi {{ user_name }},
+
+This is a friendly reminder that your {{ tier_name }} subscription will renew on {{ renewal_date }}.
+
+WHAT TO EXPECT
+===============
+
+• Your subscription will automatically renew
+• You'll receive an invoice via email
+• Your current plan features will continue uninterrupted
+
+MANAGE YOUR SUBSCRIPTION
+=========================
+
+You can manage your subscription, upgrade, or downgrade anytime at {{ account_url }}
+
+If you wish to downgrade or cancel your subscription, you can do so anytime before your renewal date without any penalty.
+
+If you have any questions or concerns, please contact our support team at {{ support_email }}.
+
+---
+© {% now "Y" %} Greatest Game Agent. All rights reserved.
+This is an automated message. Please do not reply to this email.

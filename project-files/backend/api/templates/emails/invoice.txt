@@ -1,0 +1,24 @@
+INVOICE #{{ invoice_id }} - {{ tier_name }} Plan
+================================================
+
+Hi {{ user_name }},
+
+Please find your invoice details below for your {{ tier_name }} subscription.
+
+INVOICE DETAILS
+===============
+
+Invoice ID: #{{ invoice_id }}
+Plan: {{ tier_name }}
+Billing Period: {{ billing_period }}
+Invoice Date: {{ date }}
+Due Date: {{ due_date }}
+Status: {{ status }}
+
+AMOUNT: ${{ amount|floatformat:2 }}
+
+If you have any questions about this invoice or need to update your payment method, please contact our support team at {{ support_email }}.
+
+---
+© {% now "Y" %} Greatest Game Agent. All rights reserved.
+This is an automated message. Please do not reply to this email.

@@ -1,0 +1,45 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+}
+
+.routes-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer.footer {
+  flex-shrink: 0;
+}
+
+/* Responsive layout - Tablet and below */
+@media (max-width: 1024px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .routes-container {
+    flex: 1;
+  }
+}

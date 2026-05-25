@@ -1,0 +1,40 @@
+<html>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h1 style="color: #2563eb; margin: 0;">Subscription Renewal</h1>
+      <p style="color: #666; margin: 5px 0 0 0;">Your {{ tier_name }} plan renews soon</p>
+    </div>
+
+    <p>Hi {{ user_name }},</p>
+
+    <p>This is a friendly reminder that your {{ tier_name }} subscription will renew on <strong>{{ renewal_date }}</strong>.</p>
+
+    <div style="background-color: #f0fdf4; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #16a34a;">
+      <h3 style="color: #166534; margin-top: 0;">What To Expect</h3>
+      <ul style="color: #166534; margin: 0; padding-left: 20px;">
+        <li style="margin-bottom: 8px;">Your subscription will automatically renew</li>
+        <li style="margin-bottom: 8px;">You'll receive an invoice via email</li>
+        <li style="margin-bottom: 8px;">Your current plan features will continue uninterrupted</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="{{ account_url }}" style="background-color: #2563eb; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block;">Manage Your Subscription</a>
+    </div>
+
+    <p style="color: #666; font-size: 14px; background-color: #f3f4f6; padding: 15px; border-radius: 4px; margin: 20px 0;">
+      If you wish to downgrade or cancel your subscription, you can do so anytime before your renewal date without any penalty.
+    </p>
+
+    <p>If you have any questions or concerns, please contact our support team at <a href="mailto:{{ support_email }}" style="color: #2563eb;">{{ support_email }}</a>.</p>
+
+    <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
+
+    <p style="color: #666; font-size: 12px; margin: 0;">
+      © {% now "Y" %} Greatest Game Agent. All rights reserved.<br>
+      This is an automated message. Please do not reply to this email.
+    </p>
+  </div>
+</body>
+</html>

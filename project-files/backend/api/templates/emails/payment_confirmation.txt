@@ -1,0 +1,27 @@
+PAYMENT CONFIRMATION - Your Upgrade Was Successful
+=====================================================
+
+Hi {{ user_name }},
+
+Thank you for upgrading to our {{ tier_name }} plan! Your payment has been processed successfully.
+
+ORDER SUMMARY
+=============
+
+Plan: {{ tier_name }}
+Billing Period: {{ billing_period }}
+Amount Charged: ${{ amount|floatformat:2 }}
+Invoice ID: #{{ invoice_id }}
+
+WHAT'S NEXT?
+============
+
+• Your new plan is active immediately
+• Next billing date: {{ renewal_date }}
+• You can manage your subscription in your account settings
+
+If you have any questions about your subscription or need support, please contact us at {{ support_email }}.
+
+---
+© {% now "Y" %} Greatest Game Agent. All rights reserved.
+This is an automated message. Please do not reply to this email.

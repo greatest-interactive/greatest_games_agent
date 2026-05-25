@@ -1,0 +1,65 @@
+<html>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h1 style="color: #2563eb; margin: 0;">Invoice #{{ invoice_id }}</h1>
+      <p style="color: #666; margin: 5px 0 0 0;">{{ tier_name }} Plan</p>
+    </div>
+
+    <p>Hi {{ user_name }},</p>
+
+    <p>Please find your invoice details below for your {{ tier_name }} subscription.</p>
+
+    <div style="background-color: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #2563eb;">
+      <h3 style="margin-top: 0; color: #1e40af;">Invoice Details</h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd;">Invoice ID:</td>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd; text-align: right; font-weight: bold;">#{{ invoice_id }}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd;">Plan:</td>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd; text-align: right;">{{ tier_name }}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd;">Billing Period:</td>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd; text-align: right;">{{ billing_period }}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd;">Invoice Date:</td>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd; text-align: right;">{{ date }}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd;">Due Date:</td>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd; text-align: right;">{{ due_date }}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd;">Status:</td>
+          <td style="padding: 10px 0; border-bottom: 1px solid #ddd; text-align: right;">
+            {% if status == "Paid" %}
+            <span style="background-color: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 4px; font-weight: bold;">{{ status }}</span>
+            {% elif status == "Pending" %}
+            <span style="background-color: #fef3c7; color: #92400e; padding: 4px 12px; border-radius: 4px; font-weight: bold;">{{ status }}</span>
+            {% else %}
+            <span style="background-color: #fee2e2; color: #991b1b; padding: 4px 12px; border-radius: 4px; font-weight: bold;">{{ status }}</span>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0; font-weight: bold; font-size: 16px;">Amount:</td>
+          <td style="padding: 10px 0; text-align: right; font-weight: bold; font-size: 16px; color: #2563eb;">${{ amount|floatformat:2 }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>If you have any questions about this invoice or need to update your payment method, please contact our support team at <a href="mailto:{{ support_email }}" style="color: #2563eb;">{{ support_email }}</a>.</p>
+
+    <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
+
+    <p style="color: #666; font-size: 12px; margin: 0;">
+      © {% now "Y" %} Greatest Game Agent. All rights reserved.<br>
+      This is an automated message. Please do not reply to this email.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+PAYMENT FAILED - Action Required
+================================
+
+Hi {{ user_name }},
+
+We attempted to process your payment for your {{ tier_name }} subscription on the renewal date, but unfortunately the payment failed.
+
+ERROR DETAILS
+=============
+
+{{ error_message }}
+
+WHAT YOU SHOULD DO
+==================
+
+1. Update your payment method in your account settings
+2. Ensure your card information is correct and up to date
+3. Try the payment again from your billing page
+
+UPDATE PAYMENT METHOD
+====================
+
+Visit {{ billing_url }} to update your payment information.
+
+IMPORTANT: If payment is not resolved within 5 days, your subscription may be suspended. Please update your payment information as soon as possible.
+
+If you have any questions or need assistance, please don't hesitate to contact our support team at {{ support_email }}. We're here to help!
+
+---
+© {% now "Y" %} Greatest Game Agent. All rights reserved.
+This is an automated message. Please do not reply to this email.
